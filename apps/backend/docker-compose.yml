@@ -1,24 +1,24 @@
-name: nexo-novo-projeto-backend-db
+name: nexo-backend-db
 
 services:
   postgres:
     image: postgres:16-alpine
-    container_name: nexo-novo-projeto-postgres
+    container_name: nexo-postgres
     restart: unless-stopped
     environment:
-      POSTGRES_USER: nexo_novo_projeto
+      POSTGRES_USER: postgresql
       POSTGRES_PASSWORD: docker
-      POSTGRES_DB: nexo_novo_projeto_db
+      POSTGRES_DB: nexo_db
     ports:
-      - '5685:5432'
+      - '5432:5685'
     volumes:
-      - nexo-novo-projeto-postgres-data:/var/lib/postgresql/data
+      - nexo-postgres-data:/var/lib/postgresql/data
     healthcheck:
-      test: ['CMD-SHELL', 'pg_isready -U nexo_novo_projeto']
+      test: ['CMD-SHELL', 'pg_isready -U postgresql']
       interval: 10s
       timeout: 5s
       retries: 5
 
 volumes:
-  nexo-novo-projeto-postgres-data:
+  nexo-postgres-data:
     driver: local
