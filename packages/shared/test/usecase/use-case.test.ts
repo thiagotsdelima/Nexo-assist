@@ -28,12 +28,12 @@ describe("UseCase", () => {
     const useCase = new CreateGreetingUseCase();
 
     const output = await useCase.execute({
-      name: "  Leonardo  ",
+      name: "  Thiago  ",
     });
 
     expect(output).toEqual({
-      message: "Ola, Leonardo!",
-      normalizedName: "Leonardo",
+      message: "Ola, Thiago!",
+      normalizedName: "Thiago",
     });
   });
 });

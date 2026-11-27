@@ -8,16 +8,16 @@ import { TransactionsModule } from './modules/transactions/transactions.module';
 import { DbModule } from './db/db.module';
 
 @Module({
-	imports: [
+  imports: [
     DbModule,
-		ConfigModule.forRoot({
-			isGlobal: true,
-		}),
-		AuthModule,
-		ReportsModule,
-		TransactionsModule,
-	],
-	controllers: [AppController],
-	providers: [AppService],
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
+    AuthModule,
+    ReportsModule,
+    TransactionsModule,
+  ],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}

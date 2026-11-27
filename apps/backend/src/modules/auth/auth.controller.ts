@@ -21,10 +21,8 @@ export class AuthController {
   @Post('/register')
   async registerUser(@Body() body: RegisterUserInput) {
     const useCase = new RegisterUser(this.cryptoProvider, this.userRepository);
-
     try {
       await useCase.execute(body);
-
       return {
         message: 'User registered successfully',
       };
