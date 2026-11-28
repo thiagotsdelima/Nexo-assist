@@ -3,13 +3,36 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --bg-chat: #edf1f5;
+  --bg-primary: #ffffff;
+  --primary: #1b2430;
+  --secondary: #5c6573;
+  --bg-secondary: #1b2430;
+  --secondary-foreground: #1b2430;
+  --link: #006ac7;
+  --muted: #5c6573;
+  --accent: #3e4757;
+  --bg-button: #0062c4;
+  --success: #00bd6b;
+  --hover-menu: #0285f7;
+  --popover: #946300;
+  --popover-foreground: #f5a300;
+  --box: #dce9f7;
+  --box-one: #f5e2d3;
+  --box-tree: #e6e1f7;
+  --box-four: #ddf0e5;
+  --box-five: #f7e1e6;
+  --box-sex: #e6e9ed;
+  --box-seven: #faeecf;
+  --destructive: #c4161b;
+  --point-off: #1b2430;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-news: var(--font-newsreader);
+  --font-schibsted: var(--font-schibsted-grotesk);
 }
 
 @media (prefers-color-scheme: dark) {
