@@ -1,7 +1,5 @@
+import AuthPage from "@/modules/auth/pages/auth.page";
+
 export default function Home() {
-  return (
-    <div>
-      <h1>Home</h1>
-    </div>
-  );
+  return <AuthPage />;
 }
